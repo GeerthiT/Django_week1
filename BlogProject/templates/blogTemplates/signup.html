@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends "blogTemplates/base.html" %}
+{% load static %}
+
+{% block body_block %}
+<div>
+<div class='.display-1 center'>
+    <br>
+    <div class="container center borderstyle">
+        <h3><br>Sign Up!</h3>
+        <p>
+        <form method="POST">
+            {{ form.as_p }}
+            {% csrf_token %}
+            <input type="submit" class="btn" style="background-color:grey ;color: white;" value="Submit">
+        </form>
+        </p>
+    </div> 
+    <img src="{% static "images/signup.gif" %}" alt="unable to load"> 
+</div>
+{% endblock %}
